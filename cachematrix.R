@@ -9,7 +9,7 @@
 # 3. set the inverse of matrix
 # 4. get the inverse of matrix
 
-compCacheMat <- function(x = matrix()) {
+makeCacheMatrix <- function(x = matrix()) {
 	inv <- NULL
 	set <- function(y) {
 	x <<- y
@@ -25,7 +25,7 @@ compCacheMat <- function(x = matrix()) {
 ## The following function first checks if inverse has already been compute.If it is
 ## it returns the previously computed result and skips the calculation other wise
 ## it calculates and returns the inverse 
-lookCacheOrCompute<- function(x, ...){
+cacheSolve<- function(x, ...){
 	inv<- x$getinverse()	
 	if(!is.null(inv)) {
 	message("getting invert matrix from cache.")
